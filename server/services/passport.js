@@ -24,7 +24,7 @@ passport.use(
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ googelId: profile.id }).then(existingUser => {
-        if (!existingUser) {
+        if (existingUser) {
           // already have a record of the given profile id
           done(null, existingUser);
         } else {
