@@ -17,3 +17,5 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
+
+console.log('strip key is ', process.env.REACT_STRIP_KEY);
